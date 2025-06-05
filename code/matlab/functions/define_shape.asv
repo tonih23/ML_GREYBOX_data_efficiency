@@ -1,0 +1,110 @@
+function param = define_shape(param, what)
+switch what
+    case "grid"
+        xRange = linspace(0, param.z_lim, param.n);
+        zRange = linspace(-param.x_lim, param.x_lim, param.n);
+        yRange = linspace(-param.y_lim, param.y_lim, param.n);
+
+        [param.x, param.y, param.z] = meshgrid(xRange, yRange, zRange);
+    case "cylinder"
+
+    % Ensure inputs are column vectors
+    p1 = param.joint_pos(1,:)';
+    p2 = param.joint_pos(2,:)';
+
+    % Compute the cylinder's height (length between two points)
+    height = param.numHeightDivs;
+    
+    % Create a unit cylinder along Z-axis (base centered at origin)
+    [X, Y, Z] = cylinder(param.radius, param.num_theta);
+    for i = 1:length(param.num_theta)
+    Z_up = repmat(linspace(0, param.x_lim, param.num_length), param.num_length, 1); % Adjust height resolution
+    X_up = linspace(X(1, :), X(end, :), param.num_length);
+    Y_up = repmat(Y(1, :), param.num_length, 1);
+
+    % Compute transformation (rotation + translation
+    v = (p2 - p1) / height; % Unit vector along cylinder axis
+    up = [0; 0; 1]; % Default cylinder axis in MATLAB
+
+    rotAxis = cross(up, v); % Rotation axis
+    rotAngle = acos(dot(up, v)); % Rotation angle
+
+    if norm(rotAxis) > 1e-6 % Avoid zero rotation
+        rotAxis = rotAxis / norm(rotAxis);
+        R = axang2rotm([rotAxis' rotAngle]); % Convert axis-angle to rotation matrix
+    else
+        R = eye(3); % No rotation needed
+    end
+
+    % Apply rotation and translation
+    for i = 1:numel(X_up(:,1))
+        for j = 1:numel(X_up(1, :))
+            point = R * [X_up(i, j); Y_up(i, j); Z_up(i, j)]; % Rotate
+            param.x(i, j) = point(1) + p1(1);
+            param.y(i, j) = point(2) + p1(2);
+            param.z(i, j) = point(3) + p1(3);
+        end
+    end
+
+end
+
+
+
+end
+
+
+function plot_cylinder_between_points(p1, p2, radius, numSides, numHeightDivs)
+    % Function to plot a high-resolution cylinder between two 3D points.
+    % p1, p2: [x, y, z] coordinates of the two endpoints
+    % radius: Radius of the cylinder
+    % numSides: Number of sides for the cylinder mesh (circumference resolution)
+    % numHeightDivs: Number of height divisions (longitudinal resolution)
+
+    % Ensure inputs are column vectors
+    p1 = p1(:);
+    p2 = p2(:);
+
+    % Compute the cylinder's height (length between two points)
+    height = norm(p2 - p1);
+    
+    % Create a high-resolution unit cylinder along the Z-axis
+    [X, Y, Z] = cylinder(radius, numSides);
+    Z = linspace(0, height, numHeightDivs)'; % Adjust height resolution
+    X = repmat(X(1, :), numHeightDivs, 1);
+    Y = repmat(Y(1, :), numHeightDivs, 1);
+
+    % Compute transformation (rotation + translation)
+    v = (p2 - p1) / height; % Unit vector along cylinder axis
+    up = [0; 0; 1]; % Default cylinder axis in MATLAB
+    rotAxis = cross(up, v); % Rotation axis
+    rotAngle = acos(dot(up, v)); % Rotation angle
+
+    if norm(rotAxis) > 1e-6 % Avoid zero rotation
+        rotAxis = rotAxis / norm(rotAxis);
+        R = axang2rotm([rotAxis' rotAngle]); % Convert axis-angle to rotation matrix
+    else
+        R = eye(3); % No rotation needed
+    end
+
+    % Apply rotation and translation
+    for i = 1:numel(X)
+        for j = 1:numel(X(1, :))
+            point = R * [X(i, j); Y(i, j); Z(i, j)]; % Rotate
+            X(i, j) = point(1) + p1(1);
+            Y(i, j) = point(2) + p1(2);
+            Z(i, j) = point(3) + p1(3);
+        end
+    end
+
+    % Plot cylinder
+    figure; hold on; axis equal;
+    surf(X, Y, Z, 'FaceColor', [0.5, 0.5, 1], 'EdgeColor', 'none'); % High-res cylinder
+    plot3([p1(1), p2(1)], [p1(2), p2(2)], [p1(3), p2(3)], 'r-', 'LineWidth', 2); % Line between points
+    scatter3(p1(1), p1(2), p1(3), 100, 'g', 'filled'); % Start point
+    scatter3(p2(1), p2(2), p2(3), 100, 'b', 'filled'); % End point
+
+    xlabel('X'); ylabel('Y'); zlabel('Z');
+    title('High-Resolution Cylinder Between Two Points');
+    view(3);
+    grid on;
+end

@@ -1,0 +1,23 @@
+function ang = leap_getAngle(D)
+nan(size(D.id)m)
+for digit = 1:5
+    d_name = sprintf("digit%d",digit);
+    P = [];
+    for i = 1:5
+        P(:,1,:) = D.hand.palm.pos;
+        P(:,i+1,:) = squeeze(D.hand.(d_name).pos(:,:,i));
+    end
+
+    V = diff(P,[],2);
+    
+    for j = 1:size(V,1)
+        for i = 1:4
+            v1 = squeeze(V(j,i,:))';
+            v2 = squeeze(V(j,i+1,:))';
+            ang(j,digit,i) = acosd(dot(v1, v2) ./ (norm(v1) .* norm(v2)));
+        end
+    end
+end
+
+
+

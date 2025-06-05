@@ -1,0 +1,72 @@
+function param  = load_param(what, param, model)
+import org.opensim.modeling.*
+
+switch what
+    case "initialise"
+        param.main.thres_dist = 0.01; % (m) electrical field distance for activating muscle
+        param.main.fingers = {'thumb', 'index', 'middle', 'ring', 'little'};
+
+        param.fes.width = 0.0003; % sec
+        param.fes.fq = 30; % fes stim hz
+        param.fes.amp_max = 25; %mA
+
+        param.map.dist_sigma = 0.05; % for distance decay gaussian
+        param.map.x_lim = pi;
+        param.map.y_lim = pi;
+        param.map.z_lim = 0.25;
+
+        param.grid = param.map;
+        param.grid.n = 25; % size of the grid
+        param.grid = define_shape(param.grid, "grid");
+
+        param.cylinder = param.map;
+        param.cylinder.offset_y = 0;
+        param.cylinder.offset_z = 0;
+        param.cylinder.radius = 0.04;       % Cylinder radius
+        param.cylinder.num_theta = 100;  % Angular resolution
+        param.cylinder.num_length = 50;       % Length resolution
+        param.cylinder = define_shape(param.cylinder, "cylinder");
+
+
+        param.flag.vis = false;
+        param.flag.file_save = false;
+
+        param.sim.fq = 100; % hz
+        param.sim.td = 1; % duration
+        param.sim.setIntegratorAccuracy = 1e-2;
+
+    case "model"
+        muscles = model.getMuscles();
+        param.model.numMuscles = muscles.getSize();
+
+        markerSet = model.getMarkerSet();
+        param.model.numMarkers = markerSet.getSize();
+    case "elec"
+        a = [] ;
+end
+
+end
+
+function param = define_shape(param, what)
+switch what
+    case "grid"
+        xRange = linspace(-param.x_lim, param.x_lim, param.n);
+        yRange = linspace(-param.y_lim, param.y_lim, param.n);
+        zRange = linspace(0, param.z_lim, param.n);
+        [param.x, param.y, param.z] = meshgrid(xRange, yRange, zRange);
+    case "cylinder"
+        theta = linspace(0, 2*pi, param.num_theta); % Angular positions
+        t = linspace(0, 1, param.num_length); % Length positions (normalized 0 to 1)
+
+        [X, Th] = meshgrid(t, theta); % Create cylinder mesh
+        Y = param.radius * cos(Th)+param.radius;
+        Z = param.radius * sin(Th);
+        P1 = [0, 0, 0]; % Start point of the segment
+        P2 = [0, 0, param.z_lim]; % End point along X-axis
+
+        param.x = P1(1) + X* (P2(3) - P1(3)); % Scale along segment length
+        param.y = P1(2) + Y + param.offset_y; % Perpendicular radius (Y)
+        param.z = P1(3) + Z + param.offset_z; % Perpendicular radius (Z)
+end
+end
+

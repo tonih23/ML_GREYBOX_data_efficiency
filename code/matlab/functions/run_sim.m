@@ -1,0 +1,63 @@
+function [D, Osim] = run_sim(what, Osim, param, fpath)
+import org.opensim.modeling.*
+
+Osim = gen_model("initialise", Osim, param);
+
+t = 0:1/param.sim.fq:param.sim.td;
+fes = gen_fes(param.fes, "constant");
+
+switch what
+    case "direct"
+        % compute activation level
+        activations = get_activation(param, [], Osim.muscles, Osim.MusclePath);
+
+        g = 10;
+        for i = 50:size(t,2)
+            D.thumb(i,:) = (activations.FPL - activations.APL)*10;
+            D.index(i,:) = (activations.FDPI- activations.EIP)*10;
+            D.middle(i,:) = (activations.FDPM - activations.EDCM)*10;
+            D.ring(i,:) = (activations.FDPR - activations.EDCR)*10;
+            D.little(i,:) = (activations.FDPL - activations.EDM)*10;
+        end
+        D.activations = activations;
+    case "sim"
+
+        try
+            fprintf("Simulation starting. #%05d\n", param.sim.idx)
+            tic
+            fes_now = fes(0);
+            activations = get_activation(param, fes_now, Osim.muscles, Osim.MusclePath);
+
+            for i = 1:size(t,2)
+                t_now = t(i);
+
+                Osim = set_activation(Osim, activations);
+                Osim.state = Osim.manager.integrate(t_now); % Simulate the system
+                flag = monitor_limit(Osim);
+                if flag
+                    break
+                end
+            end
+
+            if param.flag.file_save
+                storage = Storage(Osim.manager.getStateStorage());
+                save_osim(storage, param, fpath);
+            end
+            fprintf("Simulation compelte in %d sec.\n", round(toc))
+
+            coordinate_table = Osim.reporter.getTable();
+            T = osimTableToStruct(coordinate_table);
+            D.time = T.time;
+            D.thumb = T.jointset_CMC1b_cmc_abduction_value;
+            D.index = T.jointset_c_2MCP_c_2mcp_flexion_value;
+            D.middle = T.jointset_c_3MCP_c_3mcp_flexion_value;
+            D.ring = T.jointset_c_4MCP_c_4mcp_flexion_value;
+            D.little = T.jointset_c_c_5mcp_c_5mcp_flexion_value;
+            D.activations = activations;
+        catch
+            fprintf("Simulation failed. Moving on.\n")
+            D = [];
+        end
+end
+
+end

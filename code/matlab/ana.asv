@@ -1,0 +1,169 @@
+function ana
+rng(0) % make it repeatable
+import org.opensim.modeling.*
+warning off
+L = 3;   % Maximum absolute saturation level
+k = 0.8; % Controls transition smoothness
+% set fpath
+fpath = set_fpath();
+if ~isfolder(fpath.result_now)
+    mkdir(fpath.result_now)
+end
+
+% set param
+param = load_param("initialise");
+
+% load OpenSim model and initialise
+Osim = gen_model("load", fpath);
+param  = load_param("model", param, Osim.model); % update the model parameters
+
+[Osim, param] = gen_model("update", Osim, fpath, param); % update the model
+Osim = gen_model("report", Osim); % attach report
+
+param.grid = define_shape(param.grid, "grid"); % difine some geometric data
+param.cylinder = define_shape(param.cylinder, "cylinder");
+
+% initialise a plot
+h = plot_map("initialise", Osim.markers, param);
+
+% get the stimulation sequence
+param.seq = get_stimSequence(param);
+
+param.flag.file_save = true;
+
+% go through stimulation
+p_image = [];
+
+fpath.data= "C:\Users\endo\Documents\GitHub\Wesenick-bachelor-2024\data";
+a = dir(fullfile(fpath.data,"Rehyb*"));
+param.map.dist_sigma = 0.01;
+M = [];
+
+p_off(1) = pi/11.2;
+p_off(2) = pi/8;
+p_off(3) = pi/8;
+p_off(4) = pi/6;
+p_off(5) = pi/6;
+idx_data = 1;
+for i = 1:size(a,1)
+    fpath.name = a(i).name;
+    D = load(fullfile(fpath.data, fpath.name));
+    anode = map_plot_marker(D.param.fes.velec.anode,'real2osim');
+    cathode = map_plot_marker(D.param.fes.velec.cathode,'real2osim');
+    Q.idx = fullfact([size(anode,1),size(cathode,1)]);
+    param.seq.anode = num2cell(anode(Q.idx(:,1)));
+    param.seq.cathode = num2cell(cathode(Q.idx(:,2)));
+    Q.n = size(Q.idx,1);
+
+    for j = 1:5
+        var_name = sprintf("digit%d",j);
+        var_name_out = param.main.fingers{j};
+        temp = D.Motion.Leap.hand.(var_name);
+
+        ang = [];
+        for k = 1:500
+            points = squeeze(temp.pos(k,:,:))';
+            ang(k) = -(mean(get_angle(points),'omitnan'));
+        end
+
+        idx = 300:400;
+        mm = mean(ang(idx),'omitnan')+p_off(j);%mean(ang(1:20),'omitnan');
+        M.raw.(var_name_out) = mm;%L*tanh(mm*k);
+        clim([-0.01,0.01])
+
+        for k = 1:Q.n
+            LL.value.(var_name_out)(idx_data,1) = mm;
+            LL.cathode(idx_data,1) =  param.seq.cathode{k};
+        end
+    end
+    idx_data = idx_data+1;
+
+    for k = 1:Q.n
+        param = get_stimPos(param, Osim.markers,k);     % extract the current stimulation sites
+        p_image = make_map(p_image, M, param); % data storage
+        h = plot_map("update", h, p_image.mean); % update figure
+    end
+
+end
+
+temp_y = linspace(0, 0.25, 50);    % 101 points from 0 to 0.25
+temp_x = linspace(-180, 180, 101);   % 50 points from -180 to 180
+[map_X, map_Y] = meshgrid(temp_x, temp_y);       % Create the coordinate grid
+
+
+for i = 1:5
+    figure(2)
+    c = h(i).Children(end).CData;
+    % subplot(2,3,i)
+    c2 = [c(:,68:end),c(:,1:67)];
+    a = surf(map_X, map_Y, c2);
+    shading interp
+    view([0, 90])
+    colormap jet
+    clim([-0.08, 0.08])
+    % ylim([0,35])
+    axis off
+    axis square
+
+    saveas(a, fullfile(fpath.result,sprintf("data_finger%d.png",i)) )
+end
+
+%%%%%%%%%%%%%%%%%
+figure(2)
+c = h(2).Children(end).CData;
+% subplot(2,3,i)
+c2 = [c(:,68:end),c(:,1:67)];
+a = surf(map_X, map_Y, c2);
+shading interp
+view([0, 90])
+colormap jet
+clim([-0.08, 0.08])
+% ylim([0,35])
+axis off
+axis square
+
+
+idx_x = 1:5:size(c2,1);
+idx_y =  1:5:size(c2,2); 
+small_c2 = c2(idx_x, idx_y);
+small_c2 = [small_c2(:,10:end),small_c2(:,1:9)];
+small_map_x = map_X(idx_x, idx_y);
+small_map_y = map_Y(idx_x, idx_y);
+
+D.x = small_map_x(:);
+D.y = small_map_y(:);
+D.z = small_c2(:);
+
+p_image = main_sim;
+
+M.hd.x = imresize(p_image.x,[50, 50]);
+M.hd.y = imresize(p_image.y,[50, 50]);
+M.hd.z =  imresize([p_image.mean.index(:,68:end),p_image.mean.index(:,1:67)],[50, 50]);
+
+
+
+end
+
+function fpath = set_fpath
+% Load file paths
+fpath.date = char(datetime('now','Format','yyyyMMddHHmm'));
+
+fpath.code =  fullfile(fileparts(mfilename('fullpath')));
+fpath.main = fullfile(fpath.code,"..","..");
+fpath.result = fullfile(fpath.main, "results");
+fpath.result_now = fullfile(fpath.result, fpath.date);
+
+fpath.save = fullfile(fpath.result,"fd_model.mat");
+fpath.osim.main = fullfile(fpath.main, "code", "opensim");
+fpath.osim.model_name = 'wrist_fes_hand.osim';
+fpath.osim.model_mod_name = 'wrist_fes_hand_modified.osim';
+fpath.osim.model = fullfile(fpath.osim.main, fpath.osim.model_name);
+fpath.osim.model_modified = fullfile(fpath.osim.main, fpath.osim.model_mod_name);
+
+fpath.osim.state = fullfile(fpath.osim.main, 'steady_state.sto');
+
+addpath(genpath(fpath.code));
+addpath(genpath(fpath.osim.main));
+
+end
+

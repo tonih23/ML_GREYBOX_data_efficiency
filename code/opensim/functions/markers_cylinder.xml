@@ -1,0 +1,800 @@
+        <Marker name="marker_001">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.07000 -0.22000 0.02000</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_002">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.06619 -0.22000 0.03913</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_003">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05536 -0.22000 0.05536</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_004">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03913 -0.22000 0.06619</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_005">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02000 -0.22000 0.07000</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_006">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00087 -0.22000 0.06619</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_007">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01536 -0.22000 0.05536</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_008">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02619 -0.22000 0.03913</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_009">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03000 -0.22000 0.02000</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_010">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02619 -0.22000 0.00087</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_011">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01536 -0.22000 -0.01536</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_012">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00087 -0.22000 -0.02619</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_013">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02000 -0.22000 -0.03000</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_014">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03913 -0.22000 -0.02619</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_015">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05536 -0.22000 -0.01536</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_016">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.06619 -0.22000 0.00087</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_017">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.06556 -0.19778 0.01556</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_018">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.06175 -0.19778 0.03469</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_019">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05091 -0.19778 0.05091</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_020">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03469 -0.19778 0.06175</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_021">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01556 -0.19778 0.06556</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_022">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00358 -0.19778 0.06175</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_023">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01980 -0.19778 0.05091</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_024">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03064 -0.19778 0.03469</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_025">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03444 -0.19778 0.01556</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_026">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03064 -0.19778 -0.00358</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_027">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01980 -0.19778 -0.01980</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_028">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00358 -0.19778 -0.03064</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_029">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01556 -0.19778 -0.03444</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_030">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03469 -0.19778 -0.03064</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_031">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05091 -0.19778 -0.01980</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_032">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.06175 -0.19778 -0.00358</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_033">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.06111 -0.17556 0.01111</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_034">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05731 -0.17556 0.03025</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_035">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04647 -0.17556 0.04647</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_036">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03025 -0.17556 0.05731</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_037">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01111 -0.17556 0.06111</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_038">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00802 -0.17556 0.05731</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_039">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02424 -0.17556 0.04647</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_040">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03508 -0.17556 0.03025</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_041">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03889 -0.17556 0.01111</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_042">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03508 -0.17556 -0.00802</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_043">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02424 -0.17556 -0.02424</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_044">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00802 -0.17556 -0.03508</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_045">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01111 -0.17556 -0.03889</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_046">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03025 -0.17556 -0.03508</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_047">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04647 -0.17556 -0.02424</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_048">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05731 -0.17556 -0.00802</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_049">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05667 -0.15333 0.00667</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_050">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05286 -0.15333 0.02580</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_051">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04202 -0.15333 0.04202</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_052">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02580 -0.15333 0.05286</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_053">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00667 -0.15333 0.05667</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_054">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01247 -0.15333 0.05286</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_055">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02869 -0.15333 0.04202</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_056">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03953 -0.15333 0.02580</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_057">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04333 -0.15333 0.00667</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_058">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03953 -0.15333 -0.01247</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_059">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02869 -0.15333 -0.02869</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_060">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01247 -0.15333 -0.03953</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_061">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00667 -0.15333 -0.04333</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_062">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02580 -0.15333 -0.03953</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_063">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04202 -0.15333 -0.02869</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_064">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05286 -0.15333 -0.01247</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_065">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.05222 -0.13111 0.00222</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_066">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04842 -0.13111 0.02136</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_067">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03758 -0.13111 0.03758</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_068">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02136 -0.13111 0.04842</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_069">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00222 -0.13111 0.05222</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_070">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01691 -0.13111 0.04842</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_071">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03313 -0.13111 0.03758</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_072">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04397 -0.13111 0.02136</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_073">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04778 -0.13111 0.00222</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_074">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04397 -0.13111 -0.01691</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_075">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03313 -0.13111 -0.03313</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_076">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01691 -0.13111 -0.04397</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_077">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00222 -0.13111 -0.04778</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_078">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02136 -0.13111 -0.04397</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_079">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03758 -0.13111 -0.03313</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_080">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04842 -0.13111 -0.01691</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_081">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04778 -0.10889 -0.00222</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_082">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04397 -0.10889 0.01691</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_083">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03313 -0.10889 0.03313</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_084">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01691 -0.10889 0.04397</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_085">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00222 -0.10889 0.04778</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_086">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02136 -0.10889 0.04397</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_087">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03758 -0.10889 0.03313</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_088">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04842 -0.10889 0.01691</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_089">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05222 -0.10889 -0.00222</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_090">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04842 -0.10889 -0.02136</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_091">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03758 -0.10889 -0.03758</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_092">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02136 -0.10889 -0.04842</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_093">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00222 -0.10889 -0.05222</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_094">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01691 -0.10889 -0.04842</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_095">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03313 -0.10889 -0.03758</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_096">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04397 -0.10889 -0.02136</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_097">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.04333 -0.08667 -0.00667</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_098">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03953 -0.08667 0.01247</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_099">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02869 -0.08667 0.02869</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_100">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01247 -0.08667 0.03953</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_101">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00667 -0.08667 0.04333</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_102">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02580 -0.08667 0.03953</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_103">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04202 -0.08667 0.02869</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_104">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05286 -0.08667 0.01247</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_105">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05667 -0.08667 -0.00667</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_106">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05286 -0.08667 -0.02580</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_107">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04202 -0.08667 -0.04202</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_108">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02580 -0.08667 -0.05286</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_109">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00667 -0.08667 -0.05667</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_110">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01247 -0.08667 -0.05286</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_111">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02869 -0.08667 -0.04202</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_112">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03953 -0.08667 -0.02580</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_113">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03889 -0.06444 -0.01111</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_114">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03508 -0.06444 0.00802</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_115">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02424 -0.06444 0.02424</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_116">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00802 -0.06444 0.03508</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_117">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01111 -0.06444 0.03889</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_118">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03025 -0.06444 0.03508</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_119">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04647 -0.06444 0.02424</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_120">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05731 -0.06444 0.00802</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_121">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.06111 -0.06444 -0.01111</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_122">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05731 -0.06444 -0.03025</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_123">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.04647 -0.06444 -0.04647</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_124">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03025 -0.06444 -0.05731</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_125">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01111 -0.06444 -0.06111</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_126">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00802 -0.06444 -0.05731</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_127">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02424 -0.06444 -0.04647</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_128">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03508 -0.06444 -0.03025</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_129">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03444 -0.04222 -0.01556</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_130">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03064 -0.04222 0.00358</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_131">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01980 -0.04222 0.01980</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_132">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00358 -0.04222 0.03064</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_133">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01556 -0.04222 0.03444</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_134">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03469 -0.04222 0.03064</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_135">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05091 -0.04222 0.01980</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_136">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.06175 -0.04222 0.00358</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_137">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.06556 -0.04222 -0.01556</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_138">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.06175 -0.04222 -0.03469</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_139">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05091 -0.04222 -0.05091</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_140">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03469 -0.04222 -0.06175</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_141">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.01556 -0.04222 -0.06556</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_142">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.00358 -0.04222 -0.06175</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_143">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01980 -0.04222 -0.05091</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_144">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03064 -0.04222 -0.03469</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_145">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.03000 -0.02000 -0.02000</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_146">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02619 -0.02000 -0.00087</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_147">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01536 -0.02000 0.01536</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_148">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00087 -0.02000 0.02619</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_149">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02000 -0.02000 0.03000</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_150">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03913 -0.02000 0.02619</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_151">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05536 -0.02000 0.01536</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_152">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.06619 -0.02000 -0.00087</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_153">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.07000 -0.02000 -0.02000</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_154">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.06619 -0.02000 -0.03913</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_155">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.05536 -0.02000 -0.05536</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_156">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.03913 -0.02000 -0.06619</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_157">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.02000 -0.02000 -0.07000</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_158">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>-0.00087 -0.02000 -0.06619</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_159">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.01536 -0.02000 -0.05536</location>
+        <fixed>true</fixed>
+        </Marker>
+        <Marker name="marker_160">
+            <socket_parent_frame>/bodyset/radius</socket_parent_frame>
+            <location>0.02619 -0.02000 -0.03913</location>
+        <fixed>true</fixed>
+        </Marker>

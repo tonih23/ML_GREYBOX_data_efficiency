@@ -1,0 +1,81 @@
+[2024-11-17 14:07:56.577] [info] Updating Model file from 40000 to latest format...
+[2024-11-17 14:07:56.588] [info] Loaded model WristModel from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist.osim
+[2024-11-17 16:39:35.528] [info] Updating Model file from 40000 to latest format...
+[2024-11-17 16:39:35.544] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:46:30.164] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:47:27.126] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:48:18.898] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:49:31.328] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:51:31.775] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:54:02.056] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:55:15.457] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:57:52.152] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 16:59:10.920] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 17:00:15.206] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 17:00:56.576] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 17:01:33.870] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 17:06:28.201] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 17:08:30.482] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2024-11-17 17:09:28.074] [info] Loaded model Hand_Wrist_Model from file C:/Users/sendo/Desktop/git/Wesenick-bachelor-2024/code/opensim/wrist_fes.osim
+[2025-03-25 11:13:14.648] [info] Loaded model Hand_Wrist_Model from file hand_model.osim
+[2025-03-25 15:42:08.520] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:42:14.649] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:42:30.763] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:45:43.575] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:46:11.237] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:50:22.447] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:51:16.400] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:51:47.609] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:54:36.437] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 15:54:53.190] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:00:29.498] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:07:01.588] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:07:17.151] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:08:10.000] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:09:38.733] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:10:20.924] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:10:34.517] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:11:03.422] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:11:41.588] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:12:51.643] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 16:14:05.629] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 17:03:34.755] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 17:14:43.943] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 18:23:58.152] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 18:24:00.854] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 18:24:06.736] [info] Loaded model Full_UL from file 2nd_Hand_Model_Mass.osim
+[2025-03-25 18:24:06.817] [info] 'DELT1' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'DELT2' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'DELT3' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'SUPSP' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'INFSP' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'SUBSC' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'TMIN' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'TMAJ' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'PECM1' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'PECM2' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'PECM3' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'LAT1' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'LAT2' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'LAT3' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'CORB' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'TRIlong' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.817] [info] 'TRIlat' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'TRImed' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'ANC' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'SUP' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'BIClong' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'BICshort' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'BRA' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'BRD' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'ECRL' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'ECRB' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'ECU' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'FCR' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'FCU' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'PL' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'PT' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.818] [info] 'PQ' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.819] [info] 'EPB' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.819] [info] 'FPL' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.
+[2025-03-25 18:24:06.819] [info] 'APL' Parameter update for the damped-model: ActiveForceLengthCurve minimum value was 0.1 but is now 0.0.

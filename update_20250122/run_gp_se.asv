@@ -1,0 +1,118 @@
+
+param.gp.length_scale = 10; % Adjust based on problem
+param.sim.n = 50; % data resolution (point)
+param.sim.scaleFactor = 0.05; % for interpolation
+param.plt.disc_size = 100; % for scatterplot
+param.plt.LineWidth = 1;  % for scatterplot
+param.plt.MarkerEdgeColor = "w"; % for scatterplot
+param.plt.FaceAlpha = 0.9;
+
+clr = jet(101); % colour scheme
+
+[param.sim.nx, param.sim.ny] = size(p_image.mean.index);
+%%%%%%%%%%%%%%%%%%%%%%%%
+% submit the data to GP
+opts = statset('fitrgp');
+opts.TolFun = 1e-5;
+
+query_idx = 6; % First query point
+sparse_idx = 1:5:param.sim.n;
+
+% Combine Dx, Dy into coordinates matrix
+query_points = [D.x, D.y];
+
+% Preallocate storage for results
+best_y = max(D.z); % Initialise best observed value
+
+% Custom squared exponential kernel function with transformations
+custom_kernel = @(X1, X2, theta) squared_exponential_kernel(X1, X2, theta);
+
+% Initial kernel parameters: [param.gp.length_scale, scaling_factor, rotation, dx, dy]
+kernel_params = [param.gp.length_scale, 1, 0, 0, 0]; % Initial guesses
+
+% Precompute transformed sparse grid coordinates
+sparse_x = M.hd.x(sparse_idx, sparse_idx);
+sparse_y = M.hd.y(sparse_idx, sparse_idx);
+sparse_coords = [sparse_x(:), sparse_y(:)];
+
+T = create_affine_transformation(kernel_params(2), kernel_params(3), kernel_params(4:5));
+transformed_sparse_coords = apply_affine_transform(sparse_coords, T);
+transformed_sparse_x = reshape(transformed_sparse_coords(:, 1), size(sparse_x));
+transformed_sparse_y = reshape(transformed_sparse_coords(:, 2), size(sparse_y));
+
+% Helper function for interpolation
+basis_function_interp = @(X) interp2( ...
+    transformed_sparse_x, ...
+    transformed_sparse_y, ...
+    M.hd.z(sparse_idx, sparse_idx), ...
+    X(:, 1), X(:, 2), 'linear', 0);
+
+M.pred.z = M.hd.z;
+
+figure(2)
+% Loop through each query point and compute kernel with EI guidance
+for i = 1:length(D.z)
+
+    % Current query points up to iteration i
+    X_query = [D.x(query_idx, 1), D.y(query_idx, 1)]; % Queried points
+    Y_query = D.z(query_idx, 1); % Corresponding values
+
+    % Transform grid coordinates
+    grid_coords = [M.hd.x(:), M.hd.y(:)];
+    transformed_grid_coords = apply_affine_transform(grid_coords, T);
+    transformed_x = reshape(transformed_grid_coords(:, 1), size(M.hd.x));
+    transformed_y = reshape(transformed_grid_coords(:, 2), size(M.hd.y));
+
+    % Compute residuals for Y_query
+    Y_query_residual = D.z(query_idx) - interp2(transformed_x, transformed_y, M.hd.z, D.x(query_idx), D.y(query_idx), 'linear', 0);
+
+    % Fit the GP model with optimisable kernel parameters
+    gp_model = fitrgp(X_query, Y_query_residual, ...
+        'KernelFunction', @(X1, X2, theta) squared_exponential_kernel(X1, X2, theta), ...
+        'KernelParameters', kernel_params, ...
+        'Sigma', 0.01, ...
+        'SigmaLowerBound',1e-3,...
+        'Verbose', 1, ...
+        'Optimizer', 'lbfgs', ...
+        'OptimizerOptions', opts);
+
+    % Update the map and EI
+    [m_residual_pred, s_pred, ei_values] = expected_improvement([M.hd.x(:), M.hd.y(:)], gp_model, best_y);
+    m_pred = m_residual_pred + interp2(transformed_x, transformed_y, M.hd.z, M.hd.x(:), M.hd.y(:), 'linear', 0); % Add prior map back to predicted residuals
+
+    M.pred.z = reshape(m_pred, param.sim.nx, param.sim.ny);
+    M.pred_s.z = imgaussfilt(  reshape(s_pred, param.sim.nx, param.sim.ny);
+
+    % Visualise
+    hh =  imagesc(M.hd.x(1, :), M.hd.y(:, 1), M.pred.z);
+
+    clim([-1,1])
+    title(sprintf("Predicted map at query %02d", i))
+    set(gca, 'YDir', 'normal');
+    colormap('jet');
+    ylabel('dist-prox length (m)');
+    xlabel('circumference (deg)');
+    drawnow
+    axis off
+    title("")
+    saveas(hh,sprintf("fig_%03d.png",i));
+    % Select the next query point with maximum EI
+    [~, max_idx] = max(ei_values); % Find maximum EI among unqueried points
+    q_next = [M.hd.x(:), M.hd.y(:)];
+    q_next = q_next(max_idx, :);
+
+    if i < size(query_points,1)
+        % Find the nearest unqueried point
+        query_points(query_idx, :) = nan; % remove the queries samples from the next query
+        distances = sum((query_points - q_next).^2, 2);
+        [~, min_idx] = min(distances);
+        while ismember(min_idx, query_idx)
+            min_idx = randi(size(query_points,1));
+        end
+        query_idx = [query_idx; min_idx]; % Add query point
+    end
+
+    % Update best observed value if needed
+    best_y = max(best_y, D.z(i));
+end
+
